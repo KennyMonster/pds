@@ -1,0 +1,7 @@
+.idea
+*.pyc
+*.swp
+*.sqlite3
+*.DS_Store
+project3/media
+project3/project3/local.py

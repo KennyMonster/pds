@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <file>
+	<title>First File</title>
+	<version>Theatrical</version>
+	<releasedate>07/29/2011</releasedate>
+	<contenttype>Feature</contenttype>
+	<language>en</language>
+	<barcode>80220124</barcode>
+	<md5>3e25960a79dbc69b674cd4ec67a72c62</md5>
+	<filename>test_upload_1.txt</filename>
+   </file>
+   <file>
+	<title>Titanic</title>
+	<version>Theatrical</version>
+	<releasedate>02/19/2010</releasedate>
+	<contenttype>Feature</contenttype>
+	<language>en</language>
+	<barcode>8232123</barcode>
+	<md5>3e25960a79dbc69b674cd4ec67a72c62</md5>
+	<filename>test_upload_1.txt</filename>
+   </file>
+</metadata>

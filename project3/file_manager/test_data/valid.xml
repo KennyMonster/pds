@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <file>
+	<title>Cowboys and Aliens</title>
+	<version>Theatrical</version>
+	<releasedate>07/29/2011</releasedate>
+	<contenttype>Feature</contenttype>
+	<language>en</language>
+	<barcode>80220124</barcode>
+	<md5>def9769ad6b6c30803fbef53cd348b6a</md5>
+	<filename>test.mp4</filename>
+   </file>
+   <file>
+	<title>Titanic</title>
+	<version>Theatrical</version>
+	<releasedate>02/19/2010</releasedate>
+	<contenttype>Feature</contenttype>
+	<language>en</language>
+	<barcode>8232123</barcode>
+	<md5>def9769ad6b6c30803fbef53cd34abcd</md5>
+	<filename>test2.mp4</filename>
+   </file>
+</metadata>

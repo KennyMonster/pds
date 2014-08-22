@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Programming Project #3 - {% block title %}Home{% endblock %}</title>
+
+    <meta name="description" content="{% block description %}{% endblock %}">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    {% block css %}
+    {% endblock %}
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {% include "nav.html" %}
+
+    <div class="container">
+      {# Temporary messages to be displayed to the end user on certian events #}
+      {# See: https://docs.djangoproject.com/en/1.6/ref/contrib/messages/ #}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">
+          <ul class="list-inline">
+            <li></li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <script src="{% static "jquery-1.11.1.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    {% block javascript %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Manifest View{% endblock %}
+
+
+{% block content %}
+
+  <div class="page-header">
+    <h1>Manifest: {{ manifest.filename }}</h1>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Filename</th>
+        <th>Version</th>
+        <th>Release Date</th>
+        <th>Content Type</th>
+        <th>Language</th>
+        <th>Barcode</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for file in manifest.media_files.all %}
+        <tr>
+          <td>{{ file.title }}</td>
+          <td>{{ file.filename }}</td>
+          <td>{{ file.version }}</td>
+          <td>{{ file.release_date }}</td>
+          <td>{{ file.content_type }}</td>
+          <td>{{ file.language }}</td>
+          <td>{{ file.barcode }}</td>
+          <td>
+            <a href="{% url 'file-download' file.id %}">Download</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}

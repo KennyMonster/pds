@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Media File Upload{% endblock %}
+
+
+{% block content %}
+
+  <div class="page-header">
+    <h1>Upload: {{ file_to_upload.title }}
+      <br>
+      <small>{{ file_to_upload.filename }}</small>
+    </h1>
+  </div>
+
+  <div>
+    <h3>File upload {{ upload_number }} of {{ total_files_count }}</h3>
+  </div>
+
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    <input type="submit" name="submit" value="Upload" class="btn btn-primary" id="submit-id-submit">
+  </form>
+
+
+{% endblock %}

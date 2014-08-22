@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Manifest Upload{% endblock %}
+
+
+{% block content %}
+
+  <div class="page-header">
+    <h1>Upload Media Manifest</h1>
+  </div>
+
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    <input type="submit" name="submit" value="Upload" class="btn btn-primary" id="submit-id-submit">
+  </form>
+
+
+{% endblock %}
