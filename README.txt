@@ -3,7 +3,7 @@ Programming Project #3
 
 I've setup a working copy of this app at
 
-http://pds.liquefied.net:8080/
+http://107.170.170.203:8080/
 
 This is running the django dev server and backed by sqlite, so it may explode if you hit it too hard.
 
